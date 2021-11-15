@@ -12,7 +12,7 @@ class MainController extends Controller
 {
     public function home()
     {
-        // on récupère la liste de tous les personnages
+        // All of the characters
         $characters = Character::all();
         $houses = [];
 
@@ -26,7 +26,6 @@ class MainController extends Controller
             $house[] = $arrays;
         }
         // dump($house);
-        // On envoie dans la view indiquée les données récupérées
         return view('layout.home', [
             'characters' => $characters,
             'house' => $house

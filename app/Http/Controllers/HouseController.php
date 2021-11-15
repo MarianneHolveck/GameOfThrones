@@ -12,20 +12,20 @@ class HouseController extends Controller
 {
     public function list()
     {
-        // on récupère la liste de toutes les maisons
+        // We get all the houses
         $houses = House::all();
         // dump($houses);
-        // On envoie dans la view indiquée les données récupérées
+        // Sending it in the right view
         return view('layout.houses', ['houses' => $houses]);
     }
 
     public function item(int $id)
     {
 
-        // ON envoye les characters dans la view pour afficher les personnages de la maison correspondante
+        // We send the character link to this house
         $house = House::findOrFail($id);
 
-        // On récupère les characters à travers la relationship
+        // We get the character through the relationship in the database
         $characters = House::findOrFail($id)->characters;
         return view('layout.house', [
             'house' => $house,

@@ -2,10 +2,9 @@
 
 namespace App\Models;
 
-// on utilise le CoreModel de Eloquent
 use Illuminate\Database\Eloquent\Model;
 
-class House extends Model // Et on en hérite
+class House extends Model
 {
     protected $table = 'house';
 
