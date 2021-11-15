@@ -1,4 +1,4 @@
-# GameOfThrone
+# Game Of Thrones
 
 A website that shows the characters, their houses (with color), and how they are related to each other.
 
